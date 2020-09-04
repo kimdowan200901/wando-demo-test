@@ -30,9 +30,6 @@ spring:
                 fallbackuri: forward:/vcApiFallBack
         - id: demo
           uri: http://localhost:8990/demo
-          who:
-            am:
-              i: wandokim
           predicates:
             - Path=/demo/**
           filters:
