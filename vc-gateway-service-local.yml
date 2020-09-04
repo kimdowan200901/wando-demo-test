@@ -29,7 +29,7 @@ spring:
                 name: vc-api-fallback
                 fallbackuri: forward:/vcApiFallBack
         - id: demo
-          uri: lb://demo
+          uri: http://localhost:8990/demo
           predicates:
             - Path=/demo/**
           filters:
