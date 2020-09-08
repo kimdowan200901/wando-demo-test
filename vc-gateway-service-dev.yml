@@ -29,11 +29,10 @@ spring:
                 name: vc-api-fallback
                 fallbackuri: forward:/vcApiFallBack
         - id: demo
-          uri: lb://demo
+          uri: lb://WANDOKIM-DEMO-TEST-LOCAL
           predicates:
             - Path=/demo/**
-          filters:
-            - CustomAuthFilter
+          filters:            
             - name: Hystrix
               args:
                 name: vc-api-fallback
