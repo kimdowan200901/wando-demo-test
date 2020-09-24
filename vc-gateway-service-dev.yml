@@ -32,7 +32,8 @@ spring:
           uri: lb://WANDOKIM-DEMO-TEST
           predicates:
             - Path=/demo/**
-          filters:            
+          filters:
+            - CustomAuthFilter
             - name: Hystrix
               args:
                 name: vc-api-fallback
