@@ -39,7 +39,7 @@ spring:
                 name: vc-api-fallback
                 fallbackuri: forward:/vcApiFallBack
         - id: vsa
-          uri: http://192.168.0.4:8720/
+          uri: http://192.168.0.19:8720/
           predicates:
             - Path=/**
           filters:            
