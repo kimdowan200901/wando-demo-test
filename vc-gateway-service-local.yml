@@ -38,6 +38,16 @@ spring:
               args:
                 name: vc-api-fallback
                 fallbackuri: forward:/vcApiFallBack
+        - id: vsa
+          uri: lb://VSA
+          predicates:
+            - Path=/**
+          filters:            
+            - CustomAuthFilter
+            - name: Hystrix
+              args:
+                name: vc-api-fallback
+                fallbackuri: forward:/vcApiFallBack
         - id: vc_msc
           uri: lb://VC-MSC
           predicates:
