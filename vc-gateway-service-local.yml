@@ -41,7 +41,7 @@ spring:
         - id: vsa
           uri: lb://VSA
           predicates:
-            - Path=/app/**
+            - Path=/**
           filters:            
             - CustomAuthFilter
             - name: Hystrix
