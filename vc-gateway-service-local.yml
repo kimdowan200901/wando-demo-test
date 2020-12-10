@@ -38,7 +38,7 @@ spring:
               args:
                 name: vc-api-fallback
                 fallbackuri: forward:/vcApiFallBack
-        - id: vsa-app
+        - id: vsa_app
           uri: http://192.168.0.8:8710/
           predicates:
             - Path=/vsa_app/**
