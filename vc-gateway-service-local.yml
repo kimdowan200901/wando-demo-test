@@ -48,10 +48,10 @@ spring:
               args:
                 name: vc-api-fallback
                 fallbackuri: forward:/vcApiFallBack
-        - id: vsa_app
+        - id: vsa-app
           uri: http://192.168.0.8:8710
           predicates:
-            - Path=/vsa_app/**
+            - Path=/vsa-app/**
           filters:            
             - CustomAuthFilter
             - name: Hystrix
