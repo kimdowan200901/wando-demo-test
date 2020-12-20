@@ -41,7 +41,7 @@ spring:
         - id: vse_app
           uri: lb://VSE-APP
           predicates:
-            - Path=/mobile/**
+            - Path=/**
           filters:            
             - CustomAuthFilter
             - name: Hystrix
