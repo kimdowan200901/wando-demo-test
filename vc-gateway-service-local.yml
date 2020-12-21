@@ -61,16 +61,6 @@ spring:
               args:
                 name: vc-api-fallback
                 fallbackuri: forward:/vcApiFallBack
-        - id: vse
-          uri: http://192.168.0.8:8721/
-          predicates:
-            - Path=/**
-          filters:            
-            - CustomAuthFilter
-            - name: Hystrix
-              args:
-                name: vc-api-fallback
-                fallbackuri: forward:/vcApiFallBack
                 
 eureka:
   client:
