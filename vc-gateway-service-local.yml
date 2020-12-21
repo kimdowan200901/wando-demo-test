@@ -13,6 +13,7 @@ spring:
             allowedMethods:
               - GET
               - POST
+              - OPTIONS
       httpclient:
         wiretap: true
         connect-timeout: 1000
