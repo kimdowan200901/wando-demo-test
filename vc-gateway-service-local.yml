@@ -8,7 +8,6 @@ spring:
           '[/**]':
             allowedOrigins:
               - "*"
-            allow-credentials: true
             allowedMethods:
               - GET
               - POST
