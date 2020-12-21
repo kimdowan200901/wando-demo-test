@@ -9,7 +9,6 @@ spring:
             allowedOrigins:
               - "*"
             allow-credentials: true
-            allowedHeaders: "*"
             allowedMethods:
               - GET
               - POST
