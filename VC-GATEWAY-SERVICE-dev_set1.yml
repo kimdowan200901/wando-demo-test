@@ -28,16 +28,6 @@ spring:
               args:
                 name: vc-api-fallback
                 fallbackuri: forward:/vcApiFallBack
-        - id: mysc-api-instance
-          uri: http://13.124.133.232/
-          predicates:
-            - Path=/mysc/**
-          filters:
-            - CustomAuthFilter
-            - name: CircuitBreaker
-              args:
-                name: vc-api-fallback
-                fallbackuri: forward:/vcApiFallBack
         - id: demo
           uri: lb://demo
           predicates:
