@@ -50,7 +50,7 @@ spring:
         - id: vse_app
           uri: http://192.168.0.8:8710/
           predicates:
-            - Path=/**
+            - Path=/vse-app/**
           filters:            
             - CustomAuthFilter
             - name: Hystrix
