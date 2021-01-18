@@ -1,6 +1,8 @@
 spring:
   cloud:
     gateway:
+      default-filters:
+        - TokenRelay
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -10,7 +12,7 @@ spring:
               - GET
               - POST
               - OPTIONS
-        httpclient:        
+        httpclient:
           connect-timeout: 10000
           response-timeout: 50s
           wiretap: true
