@@ -13,6 +13,8 @@ spring:
               - POST
               - OPTIONS
         httpclient:
+          connect-timeout: 10000
+          response-timeout: 50s
           wiretap: true
         httpserver:
           wiretap: true
