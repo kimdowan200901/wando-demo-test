@@ -1,6 +1,8 @@
 spring:
   cloud:
     gateway:
+      default-filters:
+        - TokenRelay
       globalcors:
         corsConfigurations:
           '[/**]':
