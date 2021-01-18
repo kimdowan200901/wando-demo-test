@@ -12,11 +12,12 @@ spring:
               - GET
               - POST
               - OPTIONS
-      httpclient:        
-        connect-timeout: 10000
-        response-timeout: 50s
-      httpserver:
-        wiretap: true
+        httpclient:        
+          connect-timeout: 10000
+          response-timeout: 50s
+          wiretap: true
+        httpserver:
+          wiretap: true
       routes:
         - id: vcAppApi
           uri: lb://vcAppApi
@@ -32,9 +33,6 @@ spring:
           uri: lb://WANDOKIM-DEMO-TEST
           predicates:
             - Path=/demo/**
-          metadata:
-            connect-timeout: 15000
-            response-timeout: 15000
           filters:            
             - CustomAuthFilter
             - name: Hystrix
