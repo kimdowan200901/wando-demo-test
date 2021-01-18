@@ -33,6 +33,9 @@ spring:
           uri: lb://WANDOKIM-DEMO-TEST
           predicates:
             - Path=/demo/**
+          metadata:
+            connect-timeout: 15000
+            response-timeout: 15000
           filters:            
             - CustomAuthFilter
             - name: Hystrix
