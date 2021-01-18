@@ -15,7 +15,7 @@ spring:
       httpclient:
         wiretap: true
         connect-timeout: 10000
-        response-timeout: 10000
+        response-timeout: 50
       httpserver:
         wiretap: true
       routes:
