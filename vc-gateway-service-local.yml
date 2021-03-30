@@ -30,7 +30,7 @@ spring:
                 name: vc-api-fallback
                 fallbackuri: forward:/vcApiFallBack
         - id: demo
-          uri: lb://WANDOKIM-DEMO-TEST
+          uri: http://localhost:8710
           predicates:
             - Path=/demo/**
           filters:            
